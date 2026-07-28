@@ -1,0 +1,307 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  min-height: 100%;
+  font-family: "Segoe UI", sans-serif;
+  background: #f7f3ef;
+}
+
+.coffee-grid {
+  width: 100%;
+  min-height: 100vh;
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 160px);
+  gap: 20px;
+  padding: 20px;
+}
+
+.card {
+  border-radius: 18px;
+  overflow: hidden;
+  background: #ffffff;
+  position: relative;
+}
+
+.card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.hero-image {
+  grid-row: span 2;
+}
+
+.quote-card{
+  background: #e6d9c7;
+}
+
+.quote-content{
+  position:absolute;
+  bottom:18px;
+  left:18px;
+  color:#fff;
+}
+
+.card-label{
+  font-size:.7rem;
+  text-transform:uppercase;
+  letter-spacing:2px;
+  opacity:.9;
+}
+
+.quote-content h3{
+  margin:6px 0;
+  font-size:1.4rem;
+}
+
+.quote-content p{
+  font-size:.9rem;
+}
+
+
+
+.icon-circle{
+  position:absolute;
+  top:16px;
+  left:16px;
+  width:42px;
+  height:42px;
+  border-radius:50%;
+  background:#fff;
+  display:grid;
+  place-items:center;
+  font-size:18px;
+}
+
+.hero-details{
+  position:absolute;
+  left:16px;
+  bottom:16px;
+  color:#fff;
+}
+
+.hero-details span {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.menu-card {
+  grid-row: span 1;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: #efe3d3;
+}
+
+.menu-icon{
+  width:45px;
+  height:45px;
+  border-radius:50%;
+  background:#fff;
+  display:grid;
+  place-items:center;
+  margin-bottom:18px;
+}
+
+
+.overlay{
+  position:absolute;
+  inset:0;
+  display:flex;
+  flex-direction:column;
+  justify-content:flex-end;
+  padding:24px;
+  color:#fff;
+  background:linear-gradient(to top,rgba(0,0,0,.45),transparent);
+}
+
+.feature-card {
+  grid-row: span 2;
+  padding: 25px;
+  display: flex;
+  align-items: flex-end;
+  background: #d8b38b;
+  color: white;
+}
+
+.brand-card {
+  grid-column: span 2;
+  grid-row: span 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.brand-icon {
+  font-size: 2rem;
+  margin-bottom: 16px;
+}
+
+.stats-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px;
+  background: #ede3d4;
+}
+
+.stats-icon {
+  font-size: 1.8rem;
+  margin-bottom: 12px;
+}
+
+.portrait-card {
+  grid-row: span 2;
+}
+
+
+.review-card {
+  grid-column: span 2;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.landscape-card {
+  grid-row: span 1;
+}
+
+.brand-title {
+  font-size: 4rem;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+.label {
+  text-transform: uppercase;
+  font-size: 0.7rem;
+  letter-spacing: 2px;
+  color: #777;
+  margin-bottom: 10px;
+}
+
+.menu-card h3,
+.review-card h3,
+.stats-card h2 {
+  margin-bottom: 8px;
+}
+
+.small-title {
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  opacity: 0.8;
+  margin-bottom: 12px;
+}
+
+.top-tag{
+  position:absolute;
+  top:15px;
+  left:15px;
+  background:rgba(255,255,255,.9);
+  color: #777;
+  padding:8px 12px;
+  border-radius:999px;
+  display:flex;
+  gap:8px;
+  align-items:center;
+  font-size:.8rem;
+}
+
+.quote-icon{
+  font-size:1.5rem;
+  margin-bottom:18px;
+  color:#8b5e3c;
+}
+
+.feature-card h2 {
+  font-size: 2rem;
+  line-height: 1.1;
+}
+
+.visit-btn{
+  position:absolute;
+  left:20px;
+  bottom:20px;
+  border:none;
+  border-radius:999px;
+  padding:12px 22px;
+  background:rgba(0,0,0,.75);
+  color:#fff;
+  display:flex;
+  align-items:center;
+  gap:10px;
+  cursor:pointer;
+}
+
+
+.profile-header{
+  position:absolute;
+  top:15px;
+  left:15px;
+  right:15px;
+  display:flex;
+  align-items:center;
+  gap:8px;
+  color:#fff;
+  font-size:.8rem;
+}
+
+.profile-dot{
+  width:10px;
+  height:10px;
+  border-radius:50%;
+  background:#ffd54f;
+}
+
+.profile-header span:last-child{
+  margin-left:auto;
+}
+
+.profile-content{
+  position:absolute;
+  bottom:20px;
+  left:20px;
+  color:#fff;
+}
+
+.profile-content h2{
+  width:180px;
+  margin-bottom:18px;
+  text-transform:uppercase;
+  line-height:1.1;
+}
+
+.coffee-btn{
+  border:none;
+  background:#f4c430;
+  color:#111;
+  padding:10px 18px;
+  border-radius:999px;
+  display:flex;
+  align-items:center;
+  gap:8px;
+  font-weight:600;
+  cursor:pointer;
+}
+
+.refresh-icon{
+  position:absolute;
+  right:18px;
+  bottom:28px;
+  color:#fff;
+  font-size:2.4rem;
+}

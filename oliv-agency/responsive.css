@@ -1,0 +1,113 @@
+/* media queries */
+
+@media (max-width: 992px) {
+
+  .navbar {
+    padding: 0 1.5rem;
+  }
+
+  .nav-right {
+    gap: 1.5rem;
+  }
+
+  .nav-links {
+    gap: 1rem;
+  }
+
+  .nav-links a {
+    font-size: 13px;
+  }
+
+  .logo {
+    font-size: 36px;
+  }
+
+  /* vaue section */
+  .values-row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}
+
+@media (max-width: 768px) {
+
+  .navbar {
+    padding: 0 1rem;
+  }
+
+  .logo {
+    font-size: 32px;
+  }
+
+  .btn {
+    display: none;
+  }
+
+  .nav-right {
+    gap: 0.8rem;
+  }
+
+  .nav-links {
+    gap: 0.6rem;
+  }
+
+  .nav-links a {
+    font-size: 11px;
+  }
+
+  .dropdown-label,
+  .dropdown,
+  .cart-link {
+    font-size: 11px;
+  }
+
+  .contact-btn {
+    padding: 5px 10px;
+    font-size: 10px;
+  }
+
+  /* card section */
+  .cards-section {
+    grid-template-columns: 1fr;
+    padding: 2rem;
+  }
+
+  .card {
+    padding: 2rem;
+  }
+
+  .card-title {
+    font-size: 1.6rem;
+  }
+
+  /* values */
+  .values-row {
+    grid-template-columns: 1fr;
+  }
+
+  .values-section {
+    padding: 2rem;
+  }
+
+  .value-title {
+    font-size: 1.6rem;
+  }
+
+  .value-card {
+    min-height: 220px;
+  }
+
+  .about-section {
+    padding: 3rem 2rem;
+  }
+
+  .about-title {
+    font-size: 2.2rem;
+  }
+
+  .about-text {
+    font-size: 0.95rem;
+    line-height: 1.7;
+  }
+
+}

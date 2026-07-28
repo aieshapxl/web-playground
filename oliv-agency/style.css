@@ -1,0 +1,250 @@
+@import url(https://fonts.googleapis.com/css?family=Inter:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+main {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #fdfcf4;
+}
+
+.navbar {
+  width: 100%;
+  height: 80px;
+  padding: 0 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* background-color: pink; */
+  background-color: #fffef8;
+  border-bottom: 1px solid #e3db9d;
+}
+
+.nav-left {
+  /* background-color: rebeccapurple; */
+  display: flex;
+  align-items: center;
+  /* justify-content: space-around; */
+  margin: 8px;
+  gap: 1rem;
+}
+
+.logo {
+  font-size: 40px;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: 400;
+}
+
+.btn {
+  padding: 6px 12px;
+  border: 1px solid #c8bb63;
+  border-radius: 999px;
+  background-color: #e6c8a6;
+  color: #5a4d1f;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: background-color 0.25s ease;
+  font-family: Inter;
+}
+
+.btn:hover {
+  background-color: #e7df95;
+}
+
+.btn:active {
+  background-color: #ddd47f;
+}
+
+.nav-right {
+  /* background-color: pink; */
+  display: flex;
+  flex: 1;
+  gap: 2rem;
+  justify-content: space-between;
+  align-items: center;
+  font-family: Inter;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 14px;
+  color: #5a4d1f;
+}
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.dropdown-label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #8b7b32;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.dropdown {
+  padding: 2px;
+  background-color: #fffef6;
+  border: 1px solid #c8bb63;
+  border-radius: 10px;
+  color: #5a4d1f;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  outline: none;
+}
+
+
+.cart-link {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  text-decoration: none;
+  color: #5a4d1f;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: color 0.25s ease;
+}
+
+.cart-link:hover {
+  color: #9c8b36;
+}
+
+.cart-count {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background-color: #d8cb74;
+  color: #4a3f18;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.dropdown-group {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* hero section style */
+
+.hero-section {
+  width: 100%;
+  min-height: 100vh;
+  /* background-color: pink; */
+}
+
+.hero-content {
+  width: 100%;
+  background-color: palegoldenrod;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 5rem 4rem;
+  gap: 2rem;
+}
+
+.hero-title {
+  font-size: 4.5rem;
+  font-weight: bold;
+  line-height: 1.2;
+}
+
+.hero-description {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #665b2b;
+  max-width: 550px;
+  font-family: Inter;
+}
+
+.hero-btn {
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 999px;
+  background-color: #6d6030;
+  color: #fffef5;
+  font-size: 0.9rem;
+  cursor: pointer;
+  
+  font-family: Inter;
+}
+
+/* cards */
+
+.cards-section {
+  width: 100%;
+  padding: 4rem 2rem;
+  background-color: f7f2cf;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+}
+
+.card {
+  background-color: #fffef8;
+  padding: 2.5rem;
+  border: 1px solid #ddd38d;
+  border-radius: 20px;
+  display: flex;
+  gap: 1.5rem;
+  flex-direction: column;
+}
+
+.card-title {
+  font-size: 2rem;
+  font-weight: 500;
+  color: #5a4d1f;
+}
+
+.card-description {
+  font-family: Inter, sans-serif;
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #726737;
+}
+
+.card-link {
+  width: fit-content;
+  text-decoration: none;
+  font-family: Inter, sans-serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #9c8b36;
+  text-transform: uppercase;
+  transition: color 0.25s ease;
+  margin-top: auto;
+  align-self: center;
+}
+
+.card-link:hover {
+  color: #5a4d1f;
+}
+

@@ -1,0 +1,133 @@
+@import url(https://fonts.googleapis.com/css?family=Inter:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.main-wrapper {
+  width: 100%;
+  height: 100%;
+  background-color: #F7C627;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  overflow: hidden;
+}
+
+.left-content {
+  height: 100%;
+  /* background: #000; */
+  width: 60%;
+  position: relative;
+  padding: 2rem 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.logo {
+  position: absolute;
+  top: 1rem;
+  left: 0;
+}
+
+.info-text {
+  display: flex;
+  flex-direction: column;
+  padding: 4rem 2rem;
+  /* gap: 1rem; */
+  /* background-color: #fff; */
+  height: 80%;
+  width: 100%;
+}
+
+.generation {
+  font-family: Inter;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  color: #4A4A4A;
+}
+
+.pokemon-name {
+  font-size: 8rem;
+  text-transform: capitalize;
+}
+
+.description {
+  font-family: Inter;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.8;
+  color: #4A4A4A;
+}
+
+.counter {
+  padding-top: 2rem;
+  font-size: 18px;
+}
+
+.pokemon-image {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-20%, -50%);
+  width: 630px;
+  height: auto;
+  z-index: 10;
+}
+
+.right-content {
+  width: 40%;
+  height: 100%;
+  background-color: #f4ecd8;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu-btn {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.menu-btn i {
+  font-size: 2.2rem;
+  color: #222;
+}
+
+.slider-indicator {
+  position: absolute;
+  right: 2.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #f4c800;
+}
+
+.dot.active {
+  background: #111;
+}

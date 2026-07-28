@@ -449,3 +449,38 @@
 .branding-link:hover {
   color: #5a4d1f;
 }
+
+/* reviews */
+.review-section {
+  padding: 6rem 8%;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.review-card {
+  display: flex;
+  gap: 4rem;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 4rem;
+}
+
+.company-logo {
+  width: 120px;
+}
+
+.review-content {
+  max-width: 700px;
+}
+
+.review-title {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  line-height: 1.3;
+}
+
+.review-text {
+  color: #666;
+  line-height: 1.7;
+  margin-bottom: 1rem;
+}

@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FinTrack Pro — Dashboard</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,400,0,0"
+  >
+</head>
+
+<body class="dashboard-page">
+
+  <main class="app">
+
+    <aside class="sidebar">
+
+      <div class="sidebar-brand">
+        <div class="brand-icon">
+          <span class="material-symbols-rounded">account_balance</span>
+        </div>
+
+        <div>
+          <h2>FinTrack Pro</h2>
+          <p>Enterprise Finance</p>
+        </div>
+      </div>
+
+      <nav class="sidebar-nav">
+
+        <button class="nav-item active" data-page="dashboard">
+          <span class="material-symbols-rounded">dashboard</span>
+          <span>Dashboard</span>
+        </button>
+
+        <button class="nav-item" data-page="settings">
+          <span class="material-symbols-rounded">settings</span>
+          <span>Settings</span>
+        </button>
+
+      </nav>
+
+      <button class="add-transaction sidebar-add" id="openTransaction">
+        <span class="material-symbols-rounded">add</span>
+        Add Transaction
+      </button>
+
+    </aside>
+
+    <div class="main-area">
+
+      <header class="top-nav">
+
+        <div></div>
+
+        <div class="user-area">
+
+          <span id="username">aiesha</span>
+
+          <button class="logout-button" id="logoutButton">
+            <span class="material-symbols-rounded">logout</span>
+            Logout
+          </button>
+
+        </div>
+
+      </header>
+
+      <div class="content">
+
+        <section class="page dashboard-view">
+
+          <div class="page-heading">
+            <div>
+              <h1>Financial Overview</h1>
+              <p>Real-time tracking application</p>
+            </div>
+          </div>
+
+          <div class="stats-grid">
+
+            <article class="stat-card">
+              <div class="stat-icon">
+                <span class="material-symbols-rounded">account_balance</span>
+              </div>
+
+              <div>
+                <p>Current Balance</p>
+                <h2 id="balance">$0.00</h2>
+              </div>
+            </article>
+
+            <article class="stat-card income-card">
+              <div class="stat-icon">
+                <span class="material-symbols-rounded">trending_up</span>
+              </div>
+
+              <div>
+                <p>Total Income</p>
+                <h2 id="income">$0.00</h2>
+              </div>
+            </article>
+
+            <article class="stat-card expense-card">
+              <div class="stat-icon">
+                <span class="material-symbols-rounded">trending_down</span>
+              </div>
+
+              <div>
+                <p>Total Expense</p>
+                <h2 id="expense">$0.00</h2>
+              </div>
+            </article>
+
+            <article class="stat-card">
+              <div class="stat-icon">
+                <span class="material-symbols-rounded">receipt_long</span>
+              </div>
+
+              <div>
+                <p>Total Transactions</p>
+                <h2 id="transactionCount">0</h2>
+              </div>
+            </article>
+
+          </div>
+
+          <div class="dashboard-grid">
+
+            <section class="panel chart-panel">
+
+              <div class="panel-heading">
+                <h2>Cash Flow Analysis</h2>
+              </div>
+
+              <div class="chart-wrapper">
+
+                <div class="chart-legend">
+                  <span>
+                    <i class="income-dot"></i>
+                    Income
+                  </span>
+
+                  <span>
+                    <i class="expense-dot"></i>
+                    Expenses
+                  </span>
+                </div>
+
+                <div class="chart">
+                  <div class="chart-y-axis">
+                    <span>1.0</span>
+                    <span>0.9</span>
+                    <span>0.8</span>
+                    <span>0.7</span>
+                    <span>0.6</span>
+                    <span>0.5</span>
+                    <span>0.4</span>
+                    <span>0.3</span>
+                    <span>0.2</span>
+                    <span>0.1</span>
+                    <span>0</span>
+                  </div>
+
+                  <div class="chart-area" id="chartArea">
+                    <div class="empty-chart">
+                      Add transactions to see your cash flow.
+                    </div>
+                  </div>
+
+                  <p class="chart-label">Income vs Expenses</p>
+                </div>
+
+              </div>
+
+            </section>
+
+            <section class="panel preferences-panel">
+
+              <h2>Preferences</h2>
+
+              <div class="preference-row">
+                <span>Dark Mode</span>
+
+                <label class="switch">
+                  <input type="checkbox" id="themeToggle" checked>
+                  <span class="slider"></span>
+                </label>
+              </div>
+
+              <button class="reset-button" id="resetData">
+                <span class="material-symbols-rounded">delete</span>
+                Reset All Data
+              </button>
+
+            </section>
+
+          </div>
+
+          <section class="panel transactions-panel">
+
+            <div class="panel-heading">
+              <h2>All Transactions</h2>
+            </div>
+
+            <div class="transaction-toolbar">
+
+              <div class="search-box">
+                <span class="material-symbols-rounded">search</span>
+
+                <input
+                  type="text"
+                  id="searchTransactions"
+                  placeholder="Search transactions..."
+                >
+              </div>
+
+              <select id="transactionFilter">
+                <option value="all">All Types</option>
+                <option value="income">Income</option>
+                <option value="expense">Expense</option>
+              </select>
+
+            </div>
+
+            <div class="transaction-table">
+
+              <div class="table-header">
+                <span>DATE</span>
+                <span>DESCRIPTION</span>
+                <span>CATEGORY</span>
+                <span>AMOUNT</span>
+                <span>ACTIONS</span>
+              </div>
+
+              <div id="transactionList"></div>
+
+            </div>
+
+          </section>
+
+        </section>
+
+        <section class="page settings-view hidden">
+
+          <div class="page-heading">
+            <div>
+              <h1>Settings</h1>
+              <p>Manage your account profile and app formatting.</p>
+            </div>
+          </div>
+
+          <section class="panel profile-panel">
+
+            <h2>Profile Details</h2>
+
+            <form id="profileForm">
+
+              <div class="profile-grid">
+
+                <div class="form-group">
+                  <label for="profileName">Full Name</label>
+                  <input type="text" id="profileName">
+                </div>
+
+                <div class="form-group">
+                  <label for="currency">Primary Currency</label>
+
+                  <select id="currency">
+                    <option value="INR">INR (₹)</option>
+                    <option value="USD">USD ($)</option>
+                    <option value="EUR">EUR (€)</option>
+                    <option value="GBP">GBP (£)</option>
+                  </select>
+                </div>
+
+              </div>
+
+              <button class="primary-button save-button" type="submit">
+                Save Changes
+              </button>
+
+            </form>
+
+          </section>
+
+        </section>
+
+      </div>
+
+    </div>
+
+  </main>
+
+  <div class="modal-overlay hidden" id="transactionModal">
+
+    <div class="transaction-modal">
+
+      <div class="modal-header">
+        <h2>Add Transaction</h2>
+
+        <button id="closeTransaction">
+          <span class="material-symbols-rounded">close</span>
+        </button>
+      </div>
+
+      <form id="transactionForm">
+
+        <div class="form-group">
+          <label for="transactionType">Type</label>
+
+          <select id="transactionType" required>
+            <option value="expense">Expense</option>
+            <option value="income">Income</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="description">Description</label>
+
+          <input
+            type="text"
+            id="description"
+            placeholder="e.g. Amazon, Salary, Coffee"
+            required
+          >
+        </div>
+
+        <div class="form-row">
+
+          <div class="form-group">
+            <label for="amount">Amount</label>
+
+            <input
+              type="number"
+              id="amount"
+              min="0"
+              step="0.01"
+              required
+            >
+          </div>
+
+          <div class="form-group">
+            <label for="date">Date</label>
+
+            <input
+              type="date"
+              id="date"
+              required
+            >
+          </div>
+
+        </div>
+
+        <div class="form-group">
+          <label for="category">Category</label>
+
+          <select id="category" required>
+            <option value="">Select a category</option>
+            <option value="food">Food</option>
+            <option value="shopping">Shopping</option>
+            <option value="transport">Transport</option>
+            <option value="salary">Salary</option>
+            <option value="freelance">Freelance</option>
+            <option value="bills">Bills</option>
+            <option value="entertainment">Entertainment</option>
+            <option value="health">Health</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+
+        <button class="primary-button" type="submit">
+          Add Transaction
+        </button>
+
+      </form>
+
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
